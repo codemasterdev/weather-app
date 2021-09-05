@@ -1,0 +1,75 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background-color: black; */
+}
+
+
+main {
+    margin: 20px auto;
+    width: 94%;
+}
+
+hr {
+    background: black; 
+    height: .5rem;
+}
+
+.jumbotron {
+    color: yellow;
+    background-color: red;
+    height: 30px;
+    text-align: center;
+}
+
+.search-column {
+    background-color: white;
+}
+
+.list-group-item {
+    line-height: 0.5;
+    border: none;
+}
+
+.card-body {
+    flex: auto;
+    background-color: white;
+}
+
+.card-header {
+    background-color: white;
+
+}
+
+span.severe {
+    background-color: black;
+    color: white;
+}
+
+span.moderate {
+    background-color: black;
+}
+
+span.favorable {
+    background-color: black;
+    color: white;
+}
+
+.form-input {
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    width: 100%;
+}
+
+
+#card-top {
+    background-color: white;
+}
