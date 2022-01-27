@@ -10,7 +10,7 @@ var pastSearchBtnEl = document.querySelector("#past-search-buttons");
 
 var formSumbitHandler = function (event) {
     event.preventDefault();
-    var city = cityInputEl.value().trim();
+    var city = cityInputEl.value.trim();
     if (city) {
         getCityWeather(city);
         get5Day(city);

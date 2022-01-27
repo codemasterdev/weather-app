@@ -37,17 +37,17 @@ hr {
 
 .card-body {
     flex: auto;
-    background-color: white;
+    background-color: red;
 }
 
 .card-header {
-    background-color: white;
+    background-color: black;
 
 }
 
 span.severe {
     background-color: black;
-    color: white;
+    color: yellow;
 }
 
 span.moderate {
