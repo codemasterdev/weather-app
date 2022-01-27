@@ -2,62 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Weather Tracker</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <!-- JUMBO -->
-    <header class="jumbotron">
-        <h1>Weather Tracker</h1>
+    <header class="py-1">
+        <h1 class="col whiteText text-center">Weather Dashboard</h1>
     </header>
-    <!-- JUMBO END-->
-
-    <main class="container-fluid">
-
-        <div class="row">
-
-            <div class="col-12 col-md-3 p-2 search-column">
-                <div class="card">
-                    <form class="border p-2" id="city-search-form">
-                        <h2 class="card-header" id="card-top" ">Search for a City:</h2>
-                        <input aria-label=" input" id="city" type="text" autofocus="true" class="form-input" />
-
-                        <!-- SEARCH BUTTON-->
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </form>
-                </div>
-                <hr>
-                <div class="past-search " id="past-search-buttons"></div>
+    <div class=".container-fluid">
+        <div class="row m-2">
+            <div class="col-3 d-grid gap-3 lh-1 text-start">
+                <h3 class="m-0">Search for a City:</h3>
+                <input id="cityInput" class="form-control" autofocus="true" placeholder="San Diego" type="text"
+                    aria-label="city-input" />
+                <button id="searchCityBtn" type="submit" class="btn btn-primary">
+                    Search
+                </button>
+                <div class="border-top border-2 border-secondary"></div>
             </div>
-
-            <div class="col-12 col-md-9">
-                <div class="row border selected-city" id="current-forecast">
-                    <div class="col-12">
-                        <h2 id="searched-city"></h2>
-                        <div id="current-weather-container" class="list-group"></div>
-                    </div>
-                </div>
-                <div class="row border" id="five-day-forecast">
-                    <h2 class="col-12" id="forecast"></h2>
-                    <div class="d-flex" id="fiveday-container"></div>
+            <div class="col-9 border border-secondary">
+                <h2 id="currentCityHeder">Choose a city to start</h2>
+                <p>Temp: <span id="displayTemp"></span></p>
+                <p>Wind: <span id="displayWind"></span></p>
+                <p>Humidity: <span id="displayHumidity"></span></p>
+                <p>UV Index: <span id="displayUV"></span></p>
+            </div>
+        </div>
+        <div class="row m-2">
+            <div id="recentBtns" class="lh-1 col-3 d-grid gap-3">
+                <!-- <button class="btn btn-secondary">Pog</button>
+          <button class="btn btn-secondary">Pog</button>
+          <button class="btn btn-secondary">Pog</button>
+          <button class="btn btn-secondary">Pog</button> -->
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <h3 id="forecastHeader" class="text-start">5-Day Forecast:</h3>
+                    <div id="forecast" class="row d-flex-grid gap-4"></div>
                 </div>
             </div>
         </div>
-
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
