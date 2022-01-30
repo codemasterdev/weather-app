@@ -159,4 +159,4 @@ function retrieveCity() {
 
 
 searchCityBtn.addEventListener("click", searchCity);
-retrieveCity()
+retrieveCity();
